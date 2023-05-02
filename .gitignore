@@ -1,0 +1,27 @@
+# General
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+.venv/
+
+# Flask server logs and temporary files
+instance/
+*.log
+*.sqlite
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# API keys, credentials, and other sensitive files
+config.py
+*.pem
+*.key
+*.json
+*.env
