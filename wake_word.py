@@ -1,3 +1,13 @@
+import sys
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+porcupine_path = os.getenv("PATH_TO_PORCUPINE")
+
+sys.path.append(porcupine_path)
+
 import pvporcupine
 import pyaudio
 import struct
