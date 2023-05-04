@@ -94,6 +94,7 @@ pvporcupine @ file:///Users/jordisaleilles/porcupine/binding/python
 py2neo==2021.2.3
 pyArango==2.0.1
 pyarrow==11.0.0
+PyAudio==0.2.13
 pybind11==2.2.4
 pydantic==1.10.5
 Pygments==2.14.0
