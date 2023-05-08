@@ -13,6 +13,7 @@ import struct
 import io
 import wave
 import requests
+import time 
 
 import sounddevice as sd
 import numpy as np
@@ -81,7 +82,8 @@ def main():
             callback=callback
         ):
             print("Listening for wake word...")
-            sd.sleep(-1)
+            while True:
+                time.sleep(1)
 
     except KeyboardInterrupt:
         print("Stopping")
