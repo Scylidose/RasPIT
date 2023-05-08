@@ -59,7 +59,9 @@ def main():
     audio_stream = None
 
     try:
-        porcupine = pvporcupine.create(keywords=["raspit"])
+        access_key = os.getenv("ACCES_TOKEN_PORCUPINE")
+
+        porcupine = pvporcupine.create(keywords=["jarvis"], access_key=access_key)
         
         def callback(indata, frames, time, status):
             if status:
