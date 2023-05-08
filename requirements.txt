@@ -159,6 +159,7 @@ tzlocal==4.3
 urllib3==1.26.14
 uvicorn==0.18.3
 wasabi==1.1.1
+wavio==0.0.7
 websocket-client==1.5.1
 Werkzeug==2.3.3
 Whoosh==2.7.4
