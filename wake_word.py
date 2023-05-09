@@ -9,23 +9,24 @@ porcupine_path = os.getenv("PATH_TO_PORCUPINE")
 sys.path.append(porcupine_path)
 
 import pvporcupine
-import struct
 import io
-import wave
 import requests
 import time 
+import wavio
 
 import sounddevice as sd
 import numpy as np
+from pygame import mixer
 
 def process_audio_after_wake_word():
-    RECORD_SECONDS = 4
+    RECORD_SECONDS = 5.0
     RATE = 16000
+    CHANNELS = 1
 
     print("Recording...")
-    recording = sd.rec(int(RECORD_SECONDS * RATE), samplerate=RATE, channels=1, dtype=np.int16)
-    sd.wait()
     
+    recording = sd.rec(int(RECORD_SECONDS * RATE), samplerate=RATE, channels=CHANNELS)
+    sd.wait(RECORD_SECONDS)
     wav_file = io.BytesIO()
     wavio.write(wav_file, recording, RATE, sampwidth=2)
     wav_file.seek(0)
