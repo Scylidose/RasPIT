@@ -12,6 +12,9 @@ def process_audio():
     if 'audio_file' not in request.files:
         return jsonify({'error': 'No audio file provided'}), 400
 
+    if not os.path.exists('temp'):
+        os.makedirs('temp')
+
     audio_file = request.files['audio_file']
     file_path = os.path.join('temp', 'input.wav')
     audio_file.save(file_path)
