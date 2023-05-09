@@ -25,3 +25,5 @@ config.py
 *.key
 *.json
 *.env
+
+temp/
